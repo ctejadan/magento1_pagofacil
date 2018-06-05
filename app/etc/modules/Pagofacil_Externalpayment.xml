@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Pagofacil_Externalpayment>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Pagofacil_Externalpayment>
+    </modules>
+</config>

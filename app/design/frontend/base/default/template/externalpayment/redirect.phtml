@@ -1,0 +1,8 @@
+
+<form name="externalpaymentform" method="post" action="http://www.gateway.com/the_url_they_gave_me">
+    <input type="hidden" name="orderid" value="<?php echo $orderId; ?>">
+    <input type="hidden" name="grandtotal" value="<?php echo $_order->getBaseGrandTotal(); ?>">
+</form>
+<script type="text/javascript">
+    document.externalpaymentform.submit();
+</script>

@@ -1,0 +1,32 @@
+<section>
+
+    <h3>Select your payment platform to continue</h3>
+    <form name="platformSelection" method="post" action="<?php echo Mage::getUrl('externalpayment/payment/selected'); ?>">
+        <div class="fieldset">
+            <dl class="sp-methods" id="checkout-payment-method-load">
+
+                <?php
+                foreach ($services['externalServices'] as $key => $value) {
+                    echo '<dt>';
+                    echo '<input type="radio" class="radio" name="endpoint" value="' . $value["endpoint"] . '">';
+                    echo '<label><b>' . $value["name"] . '</b><img src="' . $value["logo_url"] . '" height="30" style="display: inline-block">';
+                    #echo '<h4 style="margin-left: 5px; display: inline-block; margin-right: 5px" > ' . $value['name'] . ' ' . '<img src="' . $value["logo_url"] . '" height="30" style="display: inline-block"></h4>';
+                    echo '<br><br>';
+                    echo '<p>' . $value['description'] . '</p>';
+                    echo '</label>';
+                    echo '</dt>';
+                }
+                ?>
+                <input type="hidden" name="postVars" value="<?php echo $postVars; ?>">
+                <br>
+            </dl>
+        </div>
+        <button type="submit" title="Select" class="button btn-cart">
+        <span>
+            <span>Select</span>
+        </span>
+        </button>
+
+    </form>
+
+</section>

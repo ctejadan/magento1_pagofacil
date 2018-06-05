@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <payment>
+            <groups>
+                <externalpayment translate="label comment" module="paygate">
+                    <label>External Payment</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <info1 translate="label">
+                            <label>
+                                Para conseguir el token service y token secret, debes crear una cuenta en el panel
+                                de control de PagoFácil.
+                            </label>
+                            <frontend_type>label</frontend_type>
+                            <comment>
+                                Integración, pruebas y desarrollo: https://dashboard.pagofacil.xyz
+
+                                Producción: https://dashboard.pagofacil.org
+                            </comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </info1>
+
+                        <info2 translate="label">
+                            <label>
+                                Integración, pruebas y desarrollo: https://dashboard.pagofacil.xyz
+                            </label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </info2>
+
+                        <info3 translate="label">
+                            <label>
+                                Producción: https://dashboard.pagofacil.org
+                            </label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </info3>
+
+
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+
+
+                        <servicetoken translate="label">
+                            <label>Service Token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </servicetoken>
+
+                        <secrettoken translate="label">
+                            <label>Secret Token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </secrettoken>
+
+                        <environment translate="label">
+                            <label>Environment</label>
+                            <comment>Select the environment.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>externalpayment/environmentselection</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </environment>
+
+                        <usepagofacilplatform translate="label">
+                            <label>Use Pago Fácil platform to show payment options?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </usepagofacilplatform>
+
+                    </fields>
+                </externalpayment>
+            </groups>
+        </payment>
+    </sections>
+</config>
